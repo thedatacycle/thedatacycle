@@ -88,7 +88,7 @@ State Data
 df = tdc.getStateData(12, 1)
 print(df)
 ```
-```Python
+```
        index         COUNTY                 DATE  MEASURE  CHANGE  PCT_CHANGE
 0          0        Alachua  1990-01-01 00:00:00      3.8     NaN         NaN
 1          1        Alachua  1990-02-01 00:00:00      3.5    -0.3    -7.89474
@@ -111,7 +111,7 @@ US Data
 df = tdc.getUSData(1)
 print(df)
 ```
-```Python
+```
        index         COUNTY                 DATE  MEASURE  CHANGE  PCT_CHANGE
 0          0  United States  1954-07-01 00:00:00     1.13     NaN         NaN
 1          1  United States  1954-07-02 00:00:00     1.25    0.12    10.61947
@@ -147,7 +147,7 @@ One Character
 ```Python
 print(tdc.getDefinitions('e'))
 ```
-```Python
+```
             E: 
                 
             Electronics Sales: measurement of sales from electronic stores and electronic media sites / downloads.  Frequency: Monthly Units: Millions USD Field Size: 1.0  
@@ -166,39 +166,9 @@ print(tdc.getDefinitions('e'))
 Multiple Characters 
 
 ```Python
-print(tdc.getDefinitions('abDk'))
+print(tdc.getDefinitions('bDk'))
 ```
-```Python
-            A: 
-        
-            Active Listings: the count of active single-family and condo/townhome listings for a given market during the specified month (excludes pending listings).  Frequency: Monthly Units: Level Field Size: 43.0  
-        
-            Alcoholic Sales Taxes: estimated tax revenue stemming from the sale of alcoholic beverages or products.  Frequency: Quarterly Units: Millions USD Field Size: 1.0  
-             
-            Allocated Transfer Risk Reserves: an allowance for bad debts that a bank keeps in order to protect against country risk. For example, a bank may keep an ATRR in case a country renders its currency inconvertible, which would prevent a foreign borrower in that country from making payments.  Frequency: Quarterly Units: Thousands USD Field Size: 2.0  
-             
-            Asian - Hispanic: a native of Asia or a person of by others to have African ancestry; and are of Cuban, Mexican, Puerto Rican, South or Central American, or other Spanish culture or origin.  Frequency: Annual Units: Persons Field Size: 67.0
-             
-             
-            Asian – Not Hispanic: a native of Asia or a person of by others to have African ancestry; and who is not of Hispanic origin.
-             Frequency: Annual Units: Persons Field Size: 67.0  
-             
-            Average House Prices: calculated by adding up all of the house prices and dividing them by the number of houses in that region.  
-            Frequency: Monthly Units: USD Field Size: 43.0
-             
-             
-            Average Weekly Hours Worked: the mean number of hours worked by employees on a weekly basis.
-            Frequency: Monthly Units: Number Field Size: 2.0
-             
-             
-            Average Hourly Earnings: the mean number of hourly earnings achieved by a collective group of employees.
-            Frequency: Monthly Units: USD Field Size: 2.0
-             
-             
-            Average Temperature: average temperature that we know of according to the standard model of particle physics.  Frequency: Monthly Units: Fahrenheit Field Size: 67.0
-            
-
-        
+```
             B: 
                 
             Bachelor’s Degree: percent of individuals that have received an bachelor’s degree. 
