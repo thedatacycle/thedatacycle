@@ -75,7 +75,7 @@ df = tdc.getStateData(state_code, state_var_code)
 ```
 
 ```Python
-df = tdc.getUSData(US_var_code)
+df = tdc.getUSData(us_var_code)
 ```
 
 Touching upon the last paragraph of the previous section, it is true that the getStateData() function requires two arguments- state_code and state_var_code.  On the other hand, the getUSData() function only requires one argument- the US_var_code.  All of these codes can be acquired by calling the getStateCodes(), getStateVarCodes(), and getUSVarCodes() functions.  Once these codes are acquired they can then be plugged into the getStateData() and getUSData() functions.  These functions will return a pandas dataframe of the dataset requested.
@@ -148,19 +148,19 @@ One Character
 print(tdc.getDefinitions('e'))
 ```
 ```
-            E: 
+E: 
                 
-            Electronics Sales: measurement of sales from electronic stores and electronic media sites / downloads.  Frequency: Monthly Units: Millions USD Field Size: 1.0  
+Electronics Sales: measurement of sales from electronic stores and electronic media sites / downloads.  Frequency: Monthly Units: Millions USD Field Size: 1.0  
              
-            Employment Cost Index: a BLS survey of employer payrolls conducted that measures the change in total employee compensation each quarter.  Frequency: Quarterly Units: Index Field Size: 1.0  
+Employment Cost Index: a BLS survey of employer payrolls conducted that measures the change in total employee compensation each quarter.  Frequency: Quarterly Units: Index Field Size: 1.0  
              
-            Employed Persons: number of people who are currently employed under the definition of the most recent legislation.  Frequency: Monthly Units: Persons Field Size: 67.0  
+Employed Persons: number of people who are currently employed under the definition of the most recent legislation.  Frequency: Monthly Units: Persons Field Size: 67.0  
              
-            Estimated Median Household Income: the median income of the householder and all other people 15 years and older in the household, whether or not they are related to the householder.  Frequency: Annual Units: USD Field Size: 67.0  
+Estimated Median Household Income: the median income of the householder and all other people 15 years and older in the household, whether or not they are related to the householder.  Frequency: Annual Units: USD Field Size: 67.0  
              
-            Ethereum: the second-largest cryptocurrency platform by market capitalization. It is a decentralized open source blockchain featuring smart contract functionality.  Frequency: Daily Units: USD Field Size: 1.0  
+Ethereum: the second-largest cryptocurrency platform by market capitalization. It is a decentralized open source blockchain featuring smart contract functionality.  Frequency: Daily Units: USD Field Size: 1.0  
              
-            Excessive Drinking Rate: percent of people in the population with excessive alcohol use, either in the form of binge drinking (drinking 5 or more drinks on an occasion for men or 4 or more drinks on an occasion for women) or heavy drinking (drinking 15 or more drinks per week for men or 8 or more drinks per week for women).  Frequency: Annual Units: Percent Field Size: 68.0  
+Excessive Drinking Rate: percent of people in the population with excessive alcohol use, either in the form of binge drinking (drinking 5 or more drinks on an occasion for men or 4 or more drinks on an occasion for women) or heavy drinking (drinking 15 or more drinks per week for men or 8 or more drinks per week for women).  Frequency: Annual Units: Percent Field Size: 68.0  
 ```
 
 Multiple Characters 
@@ -169,65 +169,58 @@ Multiple Characters
 print(tdc.getDefinitions('bDk'))
 ```
 ```
-            B: 
+B: 
                 
-            Bachelor’s Degree: percent of individuals that have received an bachelor’s degree. 
-             Frequency: Annual Units: Percent Field Size: 67.0 
+Bachelor’s Degree: percent of individuals that have received an bachelor’s degree. 
+Frequency: Annual Units: Percent Field Size: 67.0 
              
-            Bank Assets: the items that the bank owns. This includes loans, securities, and reserves. Liabilities are items that the bank owes to someone else, including deposits and bank borrowing from other institutions.
-            Frequency: Quarterly Units: Billions USD Field Size: 2.0
+Bank Assets: the items that the bank owns. This includes loans, securities, and reserves. Liabilities are items that the bank owes to someone else, including deposits and bank borrowing from other institutions.
+Frequency: Quarterly Units: Billions USD Field Size: 2.0
+
+Bank Deposits: consists of money placed into banking institutions for safekeeping. These deposits are made to deposit accounts such as savings accounts, checking accounts and money market accounts. The account holder has the right to withdraw deposited funds, as set forth in the terms and conditions governing the account agreement.
+Frequency: Quarterly Units: Billions USD Field Size: 2.0
+                
+Bank Liabilities: what the bank owes to others. Specifically, the bank owes any deposits made in the bank to those who have made them.
+Frequency: Quarterly Units: Billions USD Field Size: 2.0
+                
+Bank Prime Rate: the interest rate that commercial banks charge their most creditworthy customers, generally large corporations. The prime interest rate, or prime lending rate, is largely determined by the federal funds rate, which is the overnight rate that banks use to lend to one another.
+Frequency: Daily Units: Percent Field Size: 1.0
              
+Bitcoin: a digital currency created in January 2009 following the housing market crash. It follows the ideas set out in a whitepaper by the mysterious and pseudonymous Satoshi Nakamoto. The identity of the person or persons who created the technology is still a mystery. Bitcoin offers the promise of lower transaction fees than traditional online payment mechanisms and is operated by a decentralized authority, unlike government-issued currencies.
+Frequency: Daily Units: USD Field Size: 1.0
              
-            Bank Deposits: consists of money placed into banking institutions for safekeeping. These deposits are made to deposit accounts such as savings accounts, checking accounts and money market accounts. The account holder has the right to withdraw deposited funds, as set forth in the terms and conditions governing the account agreement.
-            Frequency: Quarterly Units: Billions USD Field Size: 2.0
+Black - Hispanic: an individual with total or partial ancestry from any of the black racial groups of Africa; and who is of Cuban, Mexican, Puerto Rican, South or Central American, or other Spanish culture or origin.  Frequency: Annual Units: Persons Field Size: 67.0
              
+Black – Not Hispanic: an individual with total or partial ancestry from any of the black racial groups of Africa; and who is not of Hispanic origin.
+Frequency: Annual Units: Persons Field Size: 67.0 
              
-            Bank Liabilities: what the bank owes to others. Specifically, the bank owes any deposits made in the bank to those who have made them.
-            Frequency: Quarterly Units: Billions USD Field Size: 2.0
+Burdened Households: the percentage of households in a particular region who pay more than 30 percent of their income towards rent or mortgage expenses  Frequency: Annual Units: Percent Field Size: 67.0  
              
-             
-            Bank Prime Rate: the interest rate that commercial banks charge their most creditworthy customers, generally large corporations. The prime interest rate, or prime lending rate, is largely determined by the federal funds rate, which is the overnight rate that banks use to lend to one another.
-            Frequency: Daily Units: Percent Field Size: 1.0
-             
-             
-            Bitcoin: a digital currency created in January 2009 following the housing market crash. It follows the ideas set out in a whitepaper by the mysterious and pseudonymous Satoshi Nakamoto. The identity of the person or persons who created the technology is still a mystery. Bitcoin offers the promise of lower transaction fees than traditional online payment mechanisms and is operated by a decentralized authority, unlike government-issued currencies.
-            Frequency: Daily Units: USD Field Size: 1.0
-             
-             
-            Black - Hispanic: an individual with total or partial ancestry from any of the black racial groups of Africa; and who is of Cuban, Mexican, Puerto Rican, South or Central American, or other Spanish culture or origin.  Frequency: Annual Units: Persons Field Size: 67.0
-             
-            Black – Not Hispanic: an individual with total or partial ancestry from any of the black racial groups of Africa; and who is not of Hispanic origin.
-             Frequency: Annual Units: Persons Field Size: 67.0 
-             
-            Burdened Households: the percentage of households in a particular region who pay more than 30 percent of their income towards rent or mortgage expenses  Frequency: Annual Units: Percent Field Size: 67.0  
-             
-            Business Applications: all applications for an EIN (Employer Identification Number), except for applications for tax liens, estates, trusts, or certain financial filings, applications with no state-county geocodes, applications from certain agricultural, public entities, and applications in certain industries (e.g. private households, civic and social organizations).  Frequency: Weekly Units: Number Field Size: 2.0  
+Business Applications: all applications for an EIN (Employer Identification Number), except for applications for tax liens, estates, trusts, or certain financial filings, applications with no state-county geocodes, applications from certain agricultural, public entities, and applications in certain industries (e.g. private households, civic and social organizations).  Frequency: Weekly Units: Number Field Size: 2.0  
              
 
-        
-            D: 
+D: 
                 
-            Department Store Sales: measurement of sales from department stores.  Frequency: Monthly Units: Millions USD Field Size: 1.0  
+Department Store Sales: measurement of sales from department stores.  Frequency: Monthly Units: Millions USD Field Size: 1.0  
              
-            Diabetes Rate: percent of people in the population diagnosed with diabetes I, diabetes II, pre-diabetes, or gestational diabetes.  Frequency: Annual Units: Percent Field Size: 1.0 
+Diabetes Rate: percent of people in the population diagnosed with diabetes I, diabetes II, pre-diabetes, or gestational diabetes.  Frequency: Annual Units: Percent Field Size: 1.0 
             
-            Diesel Gas Price Per Gallon: weighted average price per gallon for diesel gas based on the sampling of approximately 350 retail outlets.  Frequency: Weekly Units: USD per Gallon Field Size: 1.0  
+Diesel Gas Price Per Gallon: weighted average price per gallon for diesel gas based on the sampling of approximately 350 retail outlets.  Frequency: Weekly Units: USD per Gallon Field Size: 1.0  
              
-            Disconnected Youth: the percentage of youth in a particular region who are between the ages of 16 and 19, who are not enrolled in school and who are unemployed or not in the labor force.  Frequency: Annual Units: Percent Field Size: 67.0  
+Disconnected Youth: the percentage of youth in a particular region who are between the ages of 16 and 19, who are not enrolled in school and who are unemployed or not in the labor force.  Frequency: Annual Units: Percent Field Size: 67.0  
              
-            Discount Rate: the interest rate set by central banks - the Federal Reserve in the U.S. - on loans extended by the central bank to commercial banks or other depository institutions.  Frequency: Monthly Units: Percent Field Size: 1.0  
+Discount Rate: the interest rate set by central banks - the Federal Reserve in the U.S. - on loans extended by the central bank to commercial banks or other depository institutions.  Frequency: Monthly Units: Percent Field Size: 1.0  
              
-            Discouraged Workers: persons who, discouraged about their prospects of finding work, have given up their job searches and are therefore no longer officially counted as unemployed.  Frequency: Quarterly Units: Persons Field Size: 1.0  
+Discouraged Workers: persons who, discouraged about their prospects of finding work, have given up their job searches and are therefore no longer officially counted as unemployed.  Frequency: Quarterly Units: Persons Field Size: 1.0  
              
-            Documentary & Stock Transfer Taxes: estimated tax revenue stemming from the transfer of the title of real property from one person (or entity) to another within the jurisdiction. It is based on the property’s sale price and is paid by the buyer, seller, or both parties upon transfer of real property.  Frequency: Quarterly Units: Millions USD Field Size: 1.0  
+Documentary & Stock Transfer Taxes: estimated tax revenue stemming from the transfer of the title of real property from one person (or entity) to another within the jurisdiction. It is based on the property’s sale price and is paid by the buyer, seller, or both parties upon transfer of real property.  Frequency: Quarterly Units: Millions USD Field Size: 1.0  
              
-            Dow Jones Industrial: stock market index that measures the stock performance of 30 large companies listed on stock exchanges in the United States.  Frequency: Daily Units: USD Index Field Size: 1.0  
-             
+Dow Jones Industrial: stock market index that measures the stock performance of 30 large companies listed on stock exchanges in the United States.  Frequency: Daily Units: USD Index Field Size: 1.0  
 
-            
-            K: 
+
+K: 
                 
-            No terms under this letter - k. 
+No terms under this letter - k. 
 ```
 
 License
@@ -256,4 +249,4 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 
-Hire us: [The Data Cycle](https://thedatacycle.com/#service)!
+Hire us: [The Data Cycle](https://thedatacycle.com/#service)
