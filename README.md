@@ -80,15 +80,17 @@ df = tdc.getUSData(us_var_code)
 
 Touching upon the last paragraph of the previous section, it is true that the getStateData() function requires two arguments- state_code and state_var_code.  On the other hand, the getUSData() function only requires one argument- the US_var_code.  All of these codes can be acquired by calling the getStateCodes(), getStateVarCodes(), and getUSVarCodes() functions.  Once these codes are acquired they can then be plugged into the getStateData() and getUSData() functions.  These functions will return a pandas dataframe of the dataset requested.
 
-Examples:
+##### Examples:
 
-State Data
+###### State Data
 
 ```Python
 df = tdc.getStateData(12, 1)
 print(df)
 ```
 ```
+Unemployment Rate
+
        index         COUNTY                 DATE  MEASURE  CHANGE  PCT_CHANGE
 0          0        Alachua  1990-01-01 00:00:00      3.8     NaN         NaN
 1          1        Alachua  1990-02-01 00:00:00      3.5    -0.3    -7.89474
@@ -105,13 +107,15 @@ print(df)
 [26204 rows x 6 columns]
 ```
 
-US Data
+###### US Data
 
 ```Python
 df = tdc.getUSData(1)
 print(df)
 ```
 ```
+Federal Funds Rate
+
        index         COUNTY                 DATE  MEASURE  CHANGE  PCT_CHANGE
 0          0  United States  1954-07-01 00:00:00     1.13     NaN         NaN
 1          1  United States  1954-07-02 00:00:00     1.25    0.12    10.61947
@@ -140,9 +144,9 @@ print(tdc.getDefinitions(character))
 
 It is also extremely easy to use.  The user simply has to input a character (or series of characters) that belongs to the English alphabet.  Such characters compiled in this string can be lowercase or uppercase.  For example, the user can enter 'e' as the argument or 'abDk' as the argument.  Both are fully functional.  The latter will simply yield the definitions for all terms listed under the letters 'a', 'b', 'D', and 'k'.  All other characters that are not a part of the English alphabet will simply return an invalid message. 
 
-Examples: 
+##### Examples: 
 
-One Character 
+###### One Character 
 
 ```Python
 print(tdc.getDefinitions('e'))
@@ -163,7 +167,7 @@ Ethereum: the second-largest cryptocurrency platform by market capitalization. I
 Excessive Drinking Rate: percent of people in the population with excessive alcohol use, either in the form of binge drinking (drinking 5 or more drinks on an occasion for men or 4 or more drinks on an occasion for women) or heavy drinking (drinking 15 or more drinks per week for men or 8 or more drinks per week for women).  Frequency: Annual Units: Percent Field Size: 68.0  
 ```
 
-Multiple Characters 
+###### Multiple Characters 
 
 ```Python
 print(tdc.getDefinitions('bDk'))
