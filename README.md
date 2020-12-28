@@ -1,6 +1,6 @@
-# Scrapeasy - The simplest Python scraper out there!
+# thedatacycle - the organization's very own data extraction api
 
-With Scrapeasy, you can scarpe websites with python with just one line of code. Scrapeasy is super easy to use and handles everything for you. Just specify what website you want to scrape and what media you want to receive back, and the rest is done for you.
+With thedatacycle, you can extract an up-to-date dataframe from our extensive holdings of data tables.  It is an extremely easy tool to use- functions only require a few arguments.  With just four lines of code one can request a dataframe and use it for personal use.  Provided below is a comprehensive guide on how to effectively manuever through the package.  
 
 # Overview
 The Scrapeasy Python scraper was written with fast use in mind. It provides the following key features
