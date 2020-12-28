@@ -38,15 +38,21 @@ One could import a particular individual function from the module but there are 
 print(tdc.getStateCodes())
 ```
 
-Since this organization will eventually create individualized datahubs for all fifty states, it is important to assign codes for each state so that data does not overlap or get lost in transition.  By executing this statement, one will print a dictionary with the codes assigned to each state.  In the event that you are familiar with state fips codes then there may be no need to execute this statement.  Fips codes are five digit numbers that contain information regarding the state and the county.  For example, the code 12086 refers to Florida (12) and Miami-Dade County (086).  By printing the dictionary located within this function, one will observe that Florida is assigned the number 12.  
+Since this organization will eventually create individualized datahubs for all fifty states, it is important to assign codes for each state so that data does not overlap or get lost in transition.  By executing this statement, one will print a dictionary with the codes assigned to each state.  In the event that you are familiar with state fips codes then there may be no need to execute this statement.  Fips codes are five digit numbers that contain information regarding the state and the county.  For example, the code 12086 refers to Florida (12) and Miami-Dade County (086).  By printing the dictionary located within this function one will observe that Florida is assigned the number 12.  
 
 
-### Initialize a Website
-First, let's create a new Website object. For this manner, just provide the url of the main page. I will use the URL of a website that I created years ago: [fahrschule-liechti.com](http://www.fahrschule-liechti.com). 
+### Variable Codes
 
 ```Python
-web = Website("http://www.fahrschule-liechti.com/")
+print(tdc.getStateVarCodes())
 ```
+
+```Python
+print(tdc.getUSVarCodes())
+```
+
+Upon selecting the state for which you will extract a dataframe (using the getStateCodes() function), you will be required to select a variable for which to extract a time series dataset.  Such variables include unemployment rate, poverty rate, precipitation, et cetera.  
+
 
 #### Get Links of all subsites 
 Okay, now that we have our Website initialized, we are interested of all the subsites that exists on fahrschule-liechti.com. To find this out, ask the web-object to receive the links of all subpages.
