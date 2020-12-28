@@ -1,3 +1,3 @@
-from TheDataCycleAPI import getDefinitions, getStateCodes, getStateVarCodes, getUSVarCodes, getStateData, getUSData
+from thedatacycle import getDefinitions, getStateCodes, getStateVarCodes, getUSVarCodes, getStateData, getUSData
 
 
