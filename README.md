@@ -1,40 +1,47 @@
 # thedatacycle - the organization's very own data extraction api
 
-With thedatacycle, you can extract an up-to-date dataframe from our extensive holdings of data tables.  It is an extremely easy tool to use- functions only require a few arguments.  With just four lines of code one can request a dataframe and use it for personal use.  Provided below is a comprehensive guide on how to effectively manuever through the package.  
+With thedatacycle, you can extract an up-to-date dataframe from our extensive holdings of data tables.  It is an extremely easy tool to use- the functions only require a few arguments.  With just four lines of code one can request a dataframe and use it for personal use.  Provided below is a comprehensive guide on how to effectively manuever through the package.  
 
 # Overview
-The Scrapeasy Python scraper was written with fast use in mind. It provides the following key features
+thedatacycle Python package was written with fast use in mind. It provides the following key features:
 
-  - Scrape Websites - not just single pages - all with one click.
-  - The most common scrape activities (receive Links, Images or Videos) are already implemented
-  - Receive special file types like .php or .pdf datas from the scraped website
+  - Extract updated dataframes for hundreds of datasets. 
+  - Look up definitions and details of the variables pertaining to each dataset.
 
 
 ## Usage
 
-In the following paragraphs, I am going to describe how you can get and use Scrapeasy for your own projects.
+In the following paragraphs, I am going to describe how you can get and use thedatacycle for your own projects.
 
 ###  Getting it
 
-To download scrapeasy, either fork this github repo or simply use Pypi via pip.
+To download thedatacycle, either fork this github repo or simply use PyPi via pip.
 ```sh
-$ pip install scrapeasy
+$ pip install thedatacycle
 ```
 
 ### Using it
 
-Scrapeasy was programmed with ease-of-use in mind. First, import Website and Page from Scrapeasy
+thedatacycle was programmed with ease-of-use in mind. First, import thedatacycle and assign a shortcut name for the module. 
 
 ```Python
-from scrapeasy import Website, Page
+import thedatacycle as tdc
 ```
 
-And you are ready to go! At this point, I want to clearly distinct between a Website and a Page. While a Page is defined by just one single  url, like [github.com/joelbarmettlerUZH/Scrapeasy](https://github.com/joelbarmettlerUZH/Scrapeasy), a Website is a collection of such sites that belong to the same Domain. So the Website would be github as a whole, with all its pages - one of them is the scrapeasy repo. So a Website consists of many webpages. 
+One could import a particular individual function from the module but there are a multitude of functions that depend on each other.  It is important that one imports the entire module.
 
-## Website and Page
-As will notice that you can use all the methods for both *Page* and *Website* with the same argument calls. The only difference is that *Page* only gets you results from the specified URL while *Website* gives you results about the whole webpage with all its subsites. But let's have a look at the examples to make it clear:
+## State DataHubs
 
-## Initialize a Website
+### State Codes
+
+```Python
+print(tdc.getStateCodes())
+```
+
+Since this organization will eventually create individualized datahubs for all fifty states, it is important to assign codes for each state so that data does not overlap or get lost in transition.  By executing this statement, one will print a dictionary with the codes assigned to each state.  In the event that you are familiar with state fips codes then there may be no need to execute this statement.  Fips codes are five digit numbers that contain information regarding the state and the county.  For example, the code 12086 refers to Florida (12) and Miami-Dade County (086).  By printing the dictionary located within this function, one will observe that Florida is assigned the number 12.  
+
+
+### Initialize a Website
 First, let's create a new Website object. For this manner, just provide the url of the main page. I will use the URL of a website that I created years ago: [fahrschule-liechti.com](http://www.fahrschule-liechti.com). 
 
 ```Python
@@ -145,7 +152,7 @@ License
 
 MIT License
 
-Copyright (c) 2018 Joel Barmettler
+Copyright (c) 2020 The Data Cycle
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
