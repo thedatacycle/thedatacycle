@@ -83,18 +83,13 @@ Touching upon the last paragraph of the previous section, it is true that the ge
 
 ### Get Definitions 
 
-Although 
+Although the process for which requesting the dataset is quite simple, understanding the details and mechanics of the data can sometimes be difficult.  For example, not everyone knows about the meaning of allocated transfer risk reserves.  Not everyone is aware of the units level for the dataset.  However, this does not mean that the user has no need for this data.  On the contrary, it may be extremely useful for the user's individualized study or fact-finding process.  The user must simply be guided sometimes.  It is an incredibly useful tool that can fill any and all gaps in knowledge.  
 
 ```Python
-images = web.getImages()
+print(tdc.getDefinitions(letter))
 ```
 
-The response will include links to all available images. 
-
->['fahrschule-liechti.com/wp-content/themes/zerif-lite/images/map25-redish.png', 'fahrschule-liechti.com/wp-content/uploads/2016/01/fabi-kreis.png' .... ]
-
-
-
+It is also extremely easy to use.  The user simply has to input a character (or series of characters) that belongs to the English alphabet.  Such characters compiled in this string can be lowercase or uppercase.  For example, the user can enter 'e' as the argument or 'abDk' as the argument.  Both are fully functional.  The latter will simply yield the definitions for all terms listed under the letters 'a', 'b', 'd', and 'k'.  All other characters that are not a part of the English alphabet will simply return an invalid message. 
 
 
 License
